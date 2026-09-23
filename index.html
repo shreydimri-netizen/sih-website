@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HiveWatch — Honeybee Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">🐝</span>
+      <span class="brand-name">HiveWatch</span>
+    </div>
+    <p class="tagline">Simple hive health monitoring for beekeepers</p>
+  </header>
+
+  <main>
+
+    <section class="status-banner" id="statusBanner">
+      <span id="statusText">Checking hive status...</span>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Temperature</h3>
+        <p class="stat-value"><span id="tempValue">--</span>°C</p>
+        <p class="stat-range">Healthy range: 32–36°C</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Humidity</h3>
+        <p class="stat-value"><span id="humidityValue">--</span>%</p>
+        <p class="stat-range">Healthy range: 50–60%</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Bee Activity</h3>
+        <p class="stat-value"><span id="activityValue">--</span></p>
+        <p class="stat-range">Entries/exits per minute</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Hive Weight</h3>
+        <p class="stat-value"><span id="weightValue">--</span> kg</p>
+        <p class="stat-range">Tracks honey stores</p>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="refreshBtn">Refresh Readings</button>
+    </section>
+
+    <section class="alerts">
+      <h2>Alerts</h2>
+      <ul id="alertList">
+        <li class="no-alerts">No alerts yet — click refresh to check the hive.</li>
+      </ul>
+    </section>
+
+    <section class="about">
+      <h2>Why this matters</h2>
+      <p>Honeybees pollinate a large share of the crops we eat. Colony Collapse Disorder and hive stress often show early warning signs in temperature, humidity, and activity patterns — long before a beekeeper would notice by eye. A simple monitoring dashboard like this one helps catch problems early.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>HiveWatch — a basic prototype dashboard</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
